@@ -1,2 +1,25 @@
-# Qt_FramelessWindow
-Just Cross platform solution, Borrow from GitHub
+## 借鉴于Github实现的Qt无边框;
+
+
+
+### 实现的功能有:
+
+1. 支持通过使用鼠标拖拽来改变窗体位置和大小；
+
+2. 支持双击标题栏最大化窗体和还原窗体；
+
+3. 支持自定义边框阴影；
+4. 支持跨不同DPI的屏幕拖拽；
+
+5. 适应分辨率和DPI改变；
+
+### 未完成功能:
+
+1. 支持`Windows Areo Snap`特性；
+2. 支持系统阴影;
+
+
+
+### 实现效果:
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/2883810/1623413845161-5dcc1005-0ea4-4464-99da-69d938a4a70e.png)
