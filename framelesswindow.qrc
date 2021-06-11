@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>images/close.png</file>
+        <file>images/max.png</file>
+        <file>images/min.png</file>
+        <file>images/restoreBtnIcon.png</file>
+        <file>images/windowIcon.png</file>
+        <file>images/windowIcon_1.png</file>
+    </qresource>
+</RCC>

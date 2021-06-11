@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FramelessWindow</class>
+ <widget class="QWidget" name="FramelessWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>FramelessWindow</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="windowFrame" native="true">
+     <property name="styleSheet">
+      <string notr="true">#windowFrame{border:1px solid color(0,0,0); border-radius:5px 5px 5px 5px; background-color:color(255,255,255);}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>1</number>
+      </property>
+      <property name="topMargin">
+       <number>1</number>
+      </property>
+      <property name="rightMargin">
+       <number>1</number>
+      </property>
+      <property name="bottomMargin">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="WindowDragger" name="windowTitleBar" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#windowTitleBar{
+border: 0px none; 
+border-top-left-radius:5px; 
+border-top-right-radius:5px; 
+background-color:rgb(255,255,255);
+
+}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,1,0,0,0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="spacerLabel1">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+          <widget class="QLabel" name="windowIcon">
+           <property name="minimumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="spacerLabel2">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="windowTitleText">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>WindowTitle</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="minimizeBtn">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#minimizeBtn{
+    background-color:none;
+    border:none;
+    width:16px;
+    height:16px;
+    padding:4px;
+    border-radius: 5px;
+	
+	image: url(:/img/images/min.png);
+  
+}
+#minimizeBtn:hover{
+	background-color:palette(alternate-base);
+}
+##minimizeBtn:pressed{
+	background-color:palette(highlight);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="restoreBtn">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#restoreBtn{
+    background-color:none;
+    border:none;
+    width:16px;
+    height:16px;
+    padding:4px;
+    border-radius: 5px;
+
+  
+	image: url(:/img/images/restoreBtnIcon.png);
+}
+#restoreBtn:hover{
+	background-color:palette(alternate-base);
+}
+##restoreBtn:pressed{
+	background-color:palette(highlight);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="maximizeBtn">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#maximizeBtn{
+    background-color:none;
+    border:none;
+    width:16px;
+    height:16px;
+    padding:4px;
+    border-radius: 5px;
+	
+	image: url(:/img/images/max.png);
+  
+}
+#maximizeBtn:hover{
+	background-color:palette(alternate-base);
+}
+##maximizeBtn:pressed{
+	background-color:palette(highlight);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+          <widget class="QToolButton" name="closeBtn">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#closeBtn{
+    background-color:none;
+    border:none;
+    width:16px;
+    height:16px;
+    padding:4px;
+	margin:0px;
+   
+	image: url(:/img/images/close.png);
+  
+}
+#closeBtn:hover{
+	background-color:rgb(235,18,18);
+}
+##closeBtn:pressed{
+	background-color:palette(highlight);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="windowContent" native="true">
+        <property name="styleSheet">
+         <string notr="true">#windowContent{
+  border: 0px none color(255,255,255);
+  border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+	background-color:qlineargradient(spread: pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgb(255,255,255), stop:1 rgb(255,255,255))
+
+}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WindowDragger</class>
+   <extends>QWidget</extends>
+   <header location="global">WindowDragger.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
